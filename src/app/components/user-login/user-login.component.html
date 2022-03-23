@@ -1,0 +1,61 @@
+<div class="card">
+  <div class="col-md-6 offset-md-3">
+    <h1 class="card-header text-center">Login</h1>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()">
+        <!--          <mat-form-field class="full-width" appearance="outline">-->
+        <div class="form-group text-center">
+          <label appearance="outline">Username</label>
+          <input
+            [(ngModel)]="credentials.username"
+            name="username"
+            required
+            type="text"
+            class="form-control"
+          />
+          <!--          </mat-form-field>-->
+        </div>
+        <div class="form-group text-center">
+          <!--          <mat-form-field class="full-width" appearance="outline">-->
+          <label appearance="outline">Password</label>
+          <input
+            [(ngModel)]="credentials.password"
+            name="username"
+            required
+            type="password"
+            class="form-control"
+          />
+          <!--          </mat-form-field>-->
+        </div>
+        <div class="container text-center">
+          <button type="submit" class="btn btn-primary">Login</button>
+
+          <button style="margin-left: 10px" type="reset" class="btn btn-link">
+            Reset
+          </button>
+          <button
+            style="margin-left: 10px"
+            type="reset"
+            class="btn btn-link"
+            routerLink="/register"
+          >
+            Register
+          </button>
+
+          <button
+            style="margin-left: 10px"
+            type="reset"
+            class="btn btn-info"
+            routerLink="/adminlogin"
+          >
+            Login as Admin
+          </button>
+        </div>
+      </form>
+      <br />
+      <!--        <p class="mt text-center">{{ credentials | json }}</p>-->
+    </div>
+  </div>
+</div>
+
+<!--</div>-->

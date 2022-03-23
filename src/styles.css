@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+@font-face{
+  font-family: 'Roboto Mono';
+  src: url(/assets/fonts/static/RobotoMono-Regular.ttf) format("truetype");
+}
+
+h1{
+  font-family: 'Roboto Mono';
+}
+
+body {
+  padding-top: 56px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

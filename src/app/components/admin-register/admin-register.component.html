@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="col-md-6 offset-md-3">
+    <h1 class="card-header text-center">Admin Register</h1>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group text-center">
+          <label  appearance="outline">Username</label>
+          <input [(ngModel)]="register.username" name="username" required type="text" class="form-control">
+        </div>
+        <div class="form-group text-center">
+          <label  appearance="outline">Password</label>
+          <input [(ngModel)]="register.password" name="username" required type="password" class="form-control">
+        </div>
+        <div class="form-group text-center">
+          <label  appearance="outline">Role</label>
+          <input [(ngModel)]="register.role" name="username" required type="text" class="form-control">
+        </div>
+        <div class="container text-center">
+          <button type="submit"  class="btn btn-primary">
+            Register
+          </button>
+          <button style="margin-left: 10px" type="reset"  class="btn btn-link">
+            Reset
+          </button>
+          <button style="margin-left: 10px" type="reset" class="btn btn-link"  routerLink="/login">
+            Login
+          </button>
+<!--          <button style="margin-left: 10px" type="reset" class="btn btn-info"  routerLink="/adminregister">-->
+<!--            Register as Admin-->
+<!--          </button>-->
+        </div>
+      </form>
+      <br/>
+    </div>
+  </div>
+</div>

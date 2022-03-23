@@ -1,0 +1,102 @@
+<div class="row">
+  <div class="col-md-3">
+    <!-- category component -->
+    <app-product-category></app-product-category>
+  </div>
+
+  <div class="col-md-9">
+    <div class="row">
+      <div class="col-md-8">
+        <form [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()">
+          <!-- Customer info -->
+          <fieldset class="scheduler-border">
+            <legend class="scheduler-border"><h3>Cusomter</h3></legend>
+            <div formGroupName="customer">
+              <div class="row form-group">
+                <div class="col-md-3">
+                  <label>First Name</label>
+                </div>
+                <div class="col-md-9">
+                  <div>
+                    <input
+                      name="firstName"
+                      type="text"
+                      formControlName="firstName"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <label>Last Name</label>
+                </div>
+                <div class="col-md-9">
+                  <div>
+                    <input
+                      type="text"
+                      formControlName="lastName"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-3">
+                  <label>Email Name</label>
+                </div>
+                <div class="col-md-9">
+                  <div>
+                    <input
+                      type="text"
+                      formControlName="email"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="text-center">
+            <!-- <button type="submit" class="btn btn-primary">Purchase</button> -->
+            <a routerLink="/ordered-details" class="btn btn-primary"
+              >Proceed with payment</a
+            >
+          </div>
+        </form>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-muted">Your cart</span>
+              <span class="badge badge-secondary badge-pill">{{
+                cartItems.length
+              }}</span>
+            </h4>
+            <ul class="list-group mb-3">
+              <li
+                *ngFor="let cartItem of cartItems"
+                class="list-group-item d-flex justify-content-between lh-condensed"
+              >
+                <div>
+                  <h6 class="my-0">{{ cartItem.name }}</h6>
+                  <small class="text-muted"
+                    >Quantity (x{{ cartItem.quantity }})</small
+                  >
+                </div>
+                <span class="text-muted">{{
+                  cartItem.quantity * cartItem.unitPrice | currency: "INR"
+                }}</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Total (INR)</span>
+                <strong>{{ totalPrice | currency: "INR" }}</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

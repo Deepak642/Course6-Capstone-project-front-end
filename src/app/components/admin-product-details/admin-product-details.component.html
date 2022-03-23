@@ -1,0 +1,43 @@
+<div class="row">
+
+  <div class="col-lg-9">
+
+    <div class="row">
+
+      <!-- display image -->
+      <div class="col-12 col-md-4">
+
+        <div class="thumbnail">
+          <img src="{{product.imageUrl}}" width="250" height="300"/>
+
+        </div>
+
+      </div>
+
+      <!-- book info -->
+      <div class="col-12 col-md-8">
+
+        <h3>{{product.name}}</h3>
+        <hr />
+
+        <p>{{product.description}}</p>
+        <hr />
+
+        <h4>Price: <strong>{{product.unitPrice | currency: 'INR'}}</strong></h4>
+        <hr />
+
+        <h6>Qty. Available: {{product.unitsInStock}}</h6>
+        <hr />
+
+        <a routerLink="/adminproduct" class="btn btn-success">
+          <i class="fas fa-arrow-left"></i>Back
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
